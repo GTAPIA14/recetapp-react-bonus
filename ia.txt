@@ -23,3 +23,14 @@ Resultado: Útil.
 
 Modificaciones: Se utilizó el método map() para recorrer las recetas 
 y se asignó el id de cada receta como key para cumplir con las buenas prácticas de React.
+
+ETAPA 4
+
+Prompt:
+implementar un filtro por categoría y una búsqueda por nombre utilizando useState en React
+
+Resultado: Útil.
+
+Modificaciones: Se implementó un componente de filtro, un input controlado para la búsqueda, 
+se normalizó el texto usando trim() y toLowerCase(), se limitó el largo del texto y 
+se agregó un mensaje cuando no existen resultados.
