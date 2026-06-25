@@ -1,0 +1,15 @@
+ETAPA 1
+
+Prompt: Modifica mi app.jsx tomando de referencia las recetas para crear una pagina
+
+Resultado:Util.
+
+Modificaciones:Se ajusto la ruta de importacion y se modifico segun lo solicitado en la guia
+
+ETAPA 2
+
+Prompt: crea un componente React que reciba props y utilice PropTypes para validar los datos
+
+Resultado: Útil.
+
+Modificaciones: Se adapto el componente para mostrar la informacion solicitada por la guia y se agregaron colores segun la guia
