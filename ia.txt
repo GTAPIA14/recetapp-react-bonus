@@ -12,4 +12,14 @@ Prompt: crea un componente React que reciba props y utilice PropTypes para valid
 
 Resultado: Útil.
 
-Modificaciones: Se adapto el componente para mostrar la informacion solicitada por la guia y se agregaron colores segun la guia
+Modificaciones: Se adapto el componente para mostrar la informacion solicitada
+ por la guia y se agregaron colores segun la guia
+
+ETAPA 3
+
+Prompt: recorre un arreglo utilizando map() en React y renderizar componentes con una key única
+
+Resultado: Útil.
+
+Modificaciones: Se utilizó el método map() para recorrer las recetas 
+y se asignó el id de cada receta como key para cumplir con las buenas prácticas de React.
