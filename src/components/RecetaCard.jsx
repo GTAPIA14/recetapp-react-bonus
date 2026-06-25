@@ -7,6 +7,7 @@ function RecetaCard({
   categoria,
   descripcion,
   ingredientes,
+  esVegetariana,
 }) {
   const colores = {
     Entrada: "#4CAF50",
@@ -17,14 +18,34 @@ function RecetaCard({
   return (
     <div
       style={{
-        border: `3px solid ${colores[categoria]}`,
+        border: esVegetariana
+          ? "4px solid #2E7D32"
+          : `3px solid ${colores[categoria]}`,
         borderRadius: "10px",
         padding: "15px",
         margin: "20px",
         maxWidth: "500px",
+        backgroundColor: esVegetariana ? "#E8F5E9" : "white",
       }}
     >
-      <h2>{nombre}</h2>
+      <h2>
+        {nombre}
+
+        {esVegetariana && (
+          <span
+            style={{
+              marginLeft: "10px",
+              backgroundColor: "#2E7D32",
+              color: "white",
+              padding: "4px 8px",
+              borderRadius: "5px",
+              fontSize: "14px",
+            }}
+          >
+            VEG
+          </span>
+        )}
+      </h2>
 
       <p>
         <strong>Origen:</strong> {origen}
@@ -40,7 +61,7 @@ function RecetaCard({
           style={{
             backgroundColor: colores[categoria],
             color: "white",
-            padding: "4px 10px",
+            padding: "4px 8px",
             borderRadius: "5px",
           }}
         >
@@ -52,7 +73,7 @@ function RecetaCard({
         <strong>Descripción:</strong> {descripcion}
       </p>
 
-      <strong>Ingredientes:</strong>
+      <strong>Ingredientes</strong>
 
       <ul>
         {ingredientes.map((ingrediente) => (
@@ -70,6 +91,7 @@ RecetaCard.propTypes = {
   categoria: PropTypes.string,
   descripcion: PropTypes.string,
   ingredientes: PropTypes.arrayOf(PropTypes.string),
+  esVegetariana: PropTypes.bool,
 };
 
 RecetaCard.defaultProps = {
@@ -79,6 +101,7 @@ RecetaCard.defaultProps = {
   categoria: "Entrada",
   descripcion: "Sin descripción",
   ingredientes: [],
+  esVegetariana: false,
 };
 
 export default RecetaCard;

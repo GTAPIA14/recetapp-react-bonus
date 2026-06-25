@@ -7,7 +7,6 @@ import FiltroCategoria from "./components/FiltroCategoria";
 
 function App() {
   const [filtro, setFiltro] = useState("Todas");
-
   const [busqueda, setBusqueda] = useState("");
 
   const textoBusqueda = busqueda.trim().toLowerCase().slice(0, 50);
@@ -23,19 +22,22 @@ function App() {
     return coincideCategoria && coincideNombre;
   });
 
+  const totalVegetarianas = recetas.filter(
+    (receta) => receta.esVegetariana
+  ).length;
+
   return (
-    <div
-      style={{
-        padding: "20px",
-      }}
-    >
-      <h1
+    <div style={{ padding: "20px" }}>
+      <h1 style={{ textAlign: "center" }}>RecetApp</h1>
+
+      <h2
         style={{
           textAlign: "center",
+          color: "#2E7D32",
         }}
       >
-        RecetApp
-      </h1>
+        Recetas vegetarianas: {totalVegetarianas}
+      </h2>
 
       <FiltroCategoria
         filtro={filtro}

@@ -5,7 +5,7 @@ Prompt: Modifica mi app.jsx tomando de referencia las recetas para crear una pag
 Resultado:Util.
 
 Modificaciones:Se ajusto la ruta de importacion y se modifico segun lo solicitado en la guia
-
+----------------------------------------------------------------------------------------
 ETAPA 2
 
 Prompt: crea un componente React que reciba props y utilice PropTypes para validar los datos
@@ -14,7 +14,7 @@ Resultado: Útil.
 
 Modificaciones: Se adapto el componente para mostrar la informacion solicitada
  por la guia y se agregaron colores segun la guia
-
+----------------------------------------------------------------------------------------
 ETAPA 3
 
 Prompt: recorre un arreglo utilizando map() en React y renderizar componentes con una key única
@@ -23,7 +23,7 @@ Resultado: Útil.
 
 Modificaciones: Se utilizó el método map() para recorrer las recetas 
 y se asignó el id de cada receta como key para cumplir con las buenas prácticas de React.
-
+----------------------------------------------------------------------------------------
 ETAPA 4
 
 Prompt:
@@ -34,3 +34,12 @@ Resultado: Útil.
 Modificaciones: Se implementó un componente de filtro, un input controlado para la búsqueda, 
 se normalizó el texto usando trim() y toLowerCase(), se limitó el largo del texto y 
 se agregó un mensaje cuando no existen resultados.
+----------------------------------------------------------------------------------------
+ETAPA 5
+
+Prompt: destaca elementos de una lista en React utilizando renderizado condicional
+
+Resultado: Útil.
+
+Modificaciones: Se agregó una etiqueta "VEG" para las recetas vegetarianas, un borde y fondo
+ diferenciados, además de un contador dinámico de recetas vegetarianas.

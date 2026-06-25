@@ -1,0 +1,90 @@
+---------------------------------------------------------
+Componente
+
+¿Dónde lo usas en este problema?
+
+Utilizo componentes para dividir la aplicación en diferentes partes, como `RecetaCard`,
+ `ListaRecetas`, `FiltroCategoria` y `App`.
+
+¿Por qué es el adecuado?
+
+Porque permite organizar mejor el proyecto, reutilizar código y hacer que cada componente 
+tenga una función específica, facilitando el mantenimiento de la aplicación.
+----------------------------------------------------------------------------------------
+JSX
+
+¿Dónde lo usas en este problema?
+
+Lo utilizo en todos los componentes para construir la interfaz de la aplicación, mostrando los títulos,
+ las tarjetas de recetas, los botones de filtro, el buscador y la información de cada receta.
+
+¿Por qué es el adecuado?
+
+Porque permite escribir una estructura similar a HTML dentro de JavaScript, haciendo que la 
+creación de la interfaz sea más sencilla y fácil de entender.
+----------------------------------------------------------------------------------------
+Props
+
+¿Dónde lo usas en este problema?
+
+Las props se utilizan para enviar la información de cada receta desde `ListaRecetas` hacia 
+`RecetaCard`, como el nombre, el origen, la categoría, la descripción, los ingredientes y si la 
+receta es vegetariana.
+
+¿Por qué es el adecuado?
+
+Porque permiten compartir información entre componentes sin duplicar datos y mantienen una 
+mejor organización del código.
+----------------------------------------------------------------------------------------
+Estado(useState)
+
+¿Dónde lo usas en este problema?
+
+Utilizo `useState` en `App.jsx` para guardar la categoría seleccionada por el usuario y el texto
+ que escribe en el buscador.
+
+¿Por qué es el adecuado?
+
+Porque el estado permite que la aplicación actualice automáticamente las recetas 
+mostradas cuando el usuario cambia el filtro o realiza una búsqueda.
+----------------------------------------------------------------------------------------
+Renderizado de listas (.map + key)
+
+¿Dónde lo usas en este problema?
+
+Se utiliza en `ListaRecetas.jsx` para recorrer el arreglo de recetas mediante `.map()` y mostrar 
+una tarjeta por cada receta utilizando `key={receta.id}`.
+
+¿Por qué es el adecuado?
+
+Porque permite generar los componentes de forma dinámica y la propiedad `key` ayuda a React a
+ identificar correctamente cada elemento de la lista.
+----------------------------------------------------------------------------------------
+Renderizado condicional
+
+¿Dónde lo usas en este problema?
+
+Lo utilizo para mostrar el mensaje "No hay recetas que coincidan" cuando no existen resultados y para 
+mostrar la etiqueta "VEG" únicamente en las recetas vegetarianas.
+
+¿Por qué es el adecuado?
+
+Porque permite mostrar diferentes elementos dependiendo de una condición, mejorando la experiencia 
+del usuario y haciendo la interfaz más dinámica.
+----------------------------------------------------------------------------------------
+
+1. ¿Qué ventaja tiene dividir el recetario en componentes en lugar de escribir todo en un solo archivo?
+
+    R//Dividir la aplicación en componentes permite mantener el código más ordenado y fácil de entender.
+    Además, facilita reutilizar componentes, corregir errores y agregar nuevas funcionalidades sin modificar 
+    toda la aplicación.
+
+ 2. ¿Qué diferencia hay entre props y estado en tu solución? Da un ejemplo concreto de cada uno.
+
+R// *Las props son datos que un componente padre envía a un componente hijo y no deben modificarse dentro 
+    del componente que las recibe. En esta aplicación, `ListaRecetas` envía a `RecetaCard` datos como el 
+    nombre, la categoría y los ingredientes de cada receta.
+
+     *El estado (`useState`) almacena información que puede cambiar mientras la aplicación está en
+    funcionamiento. En `App.jsx` se utiliza para guardar la categoría seleccionada y el texto ingresado 
+    en el buscador, permitiendo actualizar automáticamente las recetas que se muestran.
